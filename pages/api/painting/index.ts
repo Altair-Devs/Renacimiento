@@ -9,7 +9,7 @@ const allCards = async (request: IncomingMessage, response: ServerResponse) => {
 
   response.statusCode = 200;
   response.setHeader( 'Content-type', 'application/json' );
-  response.end(JSON.stringify({data: allEntries, length}));
+  response.end(JSON.stringify({ data: allEntries, length }));
 };
 
 export default allCards;
