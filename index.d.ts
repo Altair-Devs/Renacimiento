@@ -11,16 +11,17 @@ type TProductId = string
 
 type TProductAttributes = {
   description: string
-  shape: string
-  hardiness: string
-  taste: string
+  technique: string
+  location: string
+  curious: string
 }
 
 type TProduct = {
-  id: TProductId
   name: string
+  author: string
+  id: TProductId
   sku: string
-  price: number
+  year: number
   image: Url
   attributes: TProductAttributes
 }
