@@ -2,16 +2,12 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 import DB from '@database';
 
-const allCards = async (request: NextApiRequest, response: NextApiResponse) => {
+const allPaintings = async (request: NextApiRequest, response: NextApiResponse) => {
   const db = new DB();
-
   const id = request.query.id.toString();
+  const painting = await db.getById(id);
 
-  const entry = await db.getById(id);
-
-  response.statusCode = 200;
-  response.setHeader( 'Content-type', ' application/json' );
-  response.end(JSON.stringify({ data: entry }));
+  response.status(200).json(painting);
 };
 
-export default allCards;
+export default allPaintings;
