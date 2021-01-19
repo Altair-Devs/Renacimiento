@@ -1,4 +1,4 @@
-const data: Record<TProductId, TProduct> = {
+const data: Record<TPaintingId, TPainting> = {
 	'2zd33b8c': {
 		name: 'El Nacimiento de Venus',
 		author: 'Sandro Botticelli',

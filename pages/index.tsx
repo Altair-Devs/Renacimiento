@@ -1,29 +1,26 @@
 import React, { useEffect, useState} from 'react';
 
+import PaintingList from '@components/PaintingList/PaintingList';
+
 const HomePage = () => {
-	const [productList, setProductList] = useState<TProduct[]>([]);
+	const [paintingList, setPaintingList] = useState<TPainting[]>([]);
 
 	useEffect(() => {
 		window
 			.fetch('/api/painting')
 			.then((response) => response.json())
 			.then(({ data, length}) => {
-				setProductList(data);
+				setPaintingList(data);
 			});
 	}, []);
 
-	console.log(productList);
+	console.log(paintingList);
 
 	return (
 		<div>
 			<h1>Renacimiento</h1>
 
-			{productList.map((product) => (
-				<div key={product.id}>
-					<h3>{ product.name }</h3>
-					<img src={product.image} alt={product.name}/>
-				</div>
-			))}
+			<PaintingList paintings={paintingList} />
 		</div>
 	);
 };
