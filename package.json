@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next",
+    "dev:inspect": "npm --node-options=--inspect=0.0.0.0:9229 run dev",
     "build": "next build",
     "start": "next start",
     "type-check": "tsc --noEmit"
@@ -33,7 +34,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && yarn type-check"
+      "pre-commit": "pretty-quick --staged && npm type-check"
     }
   }
 }
