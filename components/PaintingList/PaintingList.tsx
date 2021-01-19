@@ -8,7 +8,7 @@ type PaintingListProps = {
 
 const mapPaintingsToCards = (paintings: TPainting[]) =>
   paintings.map(({ id, image, name, year, author }) => (
-    <Link key={id} href="/product/[id]" as={`/product/${id}`} passHref>
+    <Link key={id} href="/painting/[id]" as={`/painting/${id}`} passHref>
       <Card
         as="a"
         image={image}
