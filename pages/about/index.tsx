@@ -1,11 +1,38 @@
-import React from 'react';
+import React from 'react'
+import { Image, Header } from 'semantic-ui-react'
+
+import Layout from '@components/Layout/Layout'
 
 const AboutPage = () => {
-	return (
-		<section>
-			<h1>About Paintings</h1>
-		</section>
-	);
-};
+  return (
+    <>
+      <Header as="h1" textAlign="center">
+        ¿Enserio llegaste hasta acá?
+      </Header>
 
-export default AboutPage;
+      <h2>
+				Bueno, no hay mucho más por ver. Esperamos que hayas disfrutado las obras!
+      </h2>
+
+      <h2>
+        También podes mirar nuestros otros proyectos en: {' '} <br />
+        <a href="https://github.com/Altair-Devs">Altaïr Devs</a> <br />
+      </h2>
+
+      <h2>
+				Y otro proyecto paralelo hecho por los autores de este sitio en: {' '} <br />
+        <a href="https://github.com/Irungaray/Next-Card">
+          Next Cards
+        </a>
+      </h2>
+
+      <style jsx>{`
+        h2 {
+          text-align: center;
+        }
+      `}</style>
+    </>
+  )
+}
+
+export default AboutPage

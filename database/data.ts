@@ -119,21 +119,21 @@ const data: Record<TPaintingId, TPainting> = {
 			curious: 'El pintor, que nunca se casó, se hizo enterrar a los pies de su musa, Simonetta Vespucci, cuando ya habían pasado treinta y cuatro años de su muerte, en la Iglesia de Ognissanti de Florencia.',
 		},
 	},
-	t345w48y: {
-		name: '',
-		author: '',
-		id: 't345w48y',
-		sku: 'MW79ZZ6Y',
-		year: 1.25,
-		image: '/images/Obra.jpg',
-		attributes: {
-			description:
-        'Descripción de la Obra',
-			technique: '??????',
-			location: '??????',
-			curious: '??????',
-		},
-	},
+	// t345w48y: {
+	// 	name: '',
+	// 	author: '',
+	// 	id: 't345w48y',
+	// 	sku: 'MW79ZZ6Y',
+	// 	year: 1.25,
+	// 	image: '/images/Obra.jpg',
+	// 	attributes: {
+	// 		description:
+  //       'Descripción de la Obra',
+	// 		technique: '??????',
+	// 		location: '??????',
+	// 		curious: '??????',
+	// 	},
+	// },
 };
 
 export default data;
