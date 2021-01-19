@@ -2,10 +2,9 @@ import React from 'react'
 import { Header, Divider, Table } from 'semantic-ui-react'
 
 const PaintingAttributes = (
-  { description, ...otherAttributes }: TPaintingAttributes,
-  { name }: TPainting )  => (
+  { description, ...otherAttributes }: TPaintingAttributes)  => (
   <section className="container">
-    <Header as='h3'>About {name}</Header>
+    <Header as='h3'>Descripción</Header>
     <p>{description}</p>
 
     <Divider />
