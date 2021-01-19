@@ -20,8 +20,6 @@ const PaintingPage = () => {
 
 	return (
 		<section>
-			<h1>Painting: {query.id}</h1>
-
 			{ painting == null
 				? <h1>...</h1>
 				: <PaintingSummary painting={painting} />
