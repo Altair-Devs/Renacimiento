@@ -2,18 +2,18 @@ import React, { useEffect, useState} from 'react';
 
 import PaintingList from '@components/PaintingList/PaintingList';
 
-const HomePage = () => {
-	const [paintingList, setPaintingList] = useState<TPainting[]>([]);
+export const getServerSideProps = async () => {
+	const response = await fetch('https://renacimiento.altair-devs.vercel.app/api/painting')
+	const { data: paintingList }: TAPIResponse = await response.json()
 
-	useEffect(() => {
-		window
-			.fetch('/api/painting')
-			.then((response) => response.json())
-			.then(({ data, length}) => {
-				setPaintingList(data);
-			});
-	}, []);
+	return {
+		props: {
+			paintingList,
+		}
+	}
+}
 
+const HomePage = ({ paintingList }: { paintingList: TPainting[] }) => {
 	console.log(paintingList);
 
 	return (
