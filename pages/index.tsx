@@ -14,8 +14,6 @@ export const getServerSideProps = async () => {
 }
 
 const HomePage = ({ paintingList }: { paintingList: TPainting[] }) => {
-	console.log(paintingList);
-
 	return (
 		<div>
 			<h1>Renacimiento</h1>
