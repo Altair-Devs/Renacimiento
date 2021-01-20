@@ -26,9 +26,9 @@ type TPainting = {
   attributes: TPaintingAttributes
 }
 
-type TAPIAVODetailResponse = TPainting
+type TAPIDetailResponse = TPainting
 
-type TAPIAvoResponse = {
+type TAPIResponse = {
   lenght: number
   data: TPainting[]
   error?: string
