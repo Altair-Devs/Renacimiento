@@ -1,8 +1,6 @@
 import React from 'react'
 import { Image, Header } from 'semantic-ui-react'
 
-import Layout from '@components/Layout/Layout'
-
 const AboutPage = () => {
   return (
     <>
@@ -16,12 +14,12 @@ const AboutPage = () => {
 
       <h2>
         También podes mirar nuestros otros proyectos en: {' '} <br />
-        <a href="https://github.com/Altair-Devs">Altaïr Devs</a> <br />
+        <a href="https://github.com/Altair-Devs" target="blank">Altaïr Devs</a> <br />
       </h2>
 
       <h2>
 				Y otro proyecto paralelo hecho por los autores de este sitio en: {' '} <br />
-        <a href="https://github.com/Irungaray/Next-Card">
+        <a href="https://github.com/Irungaray/Next-Card" target="blank">
           Next Cards
         </a>
       </h2>

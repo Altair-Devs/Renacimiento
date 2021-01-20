@@ -20,15 +20,17 @@ const Footer = () => (
             <List>
               <List.Item>
                 <Link href="/about">
-                  <p>
-										<a>Nosotros</a> <br />
-										<a href="https://es.wikipedia.org/wiki/Renacimiento" target="blank">El Renacimiento</a>
-									</p>
+                  <a>Nosotros</a>
                 </Link>
               </List.Item>
             </List>
+
+						<a href="https://es.wikipedia.org/wiki/Renacimiento" target="blank">
+							El Renacimiento
+						</a>
           </Grid.Column>
-          <Grid.Column width={5}>
+
+					<Grid.Column width={5}>
             <Header as="h4" content="Obras" />
             <List>
               <List.Item>
@@ -41,23 +43,33 @@ const Footer = () => (
           <Grid.Column width={7}>
             <Header as="h4">Hecho por</Header>
             <p>
-              <a href="https://twitter.com/Irunga_Ray">Irungaray{' '}</a>
-							y {' '}
-              <a href="https://github.com/NataliCalzia">Natali Calzia{' '}</a>
-              para {' '}
-							<a href="https://github.com/Altair-Devs">Altaïr Devs</a>
+              <a href="https://twitter.com/Irunga_Ray" target="blank">
+                Irungaray{' '}
+              </a>
+              y{' '}
+              <a href="https://github.com/NataliCalzia" target="blank">
+                Natali Calzia{' '}
+              </a>
+              para{' '}
+              <a href="https://github.com/Altair-Devs" target="blank">
+                Altaïr Devs
+              </a>
             </p>
             <List horizontal style={{ display: 'flex' }}>
               <List.Item
                 icon="twitter"
                 style={{ display: 'flex' }}
-                content={<a href="https://twitter.com/Altair-Devs">Twitter</a>}
+                content={
+                  <a href="https://twitter.com/Altair-Devs" target="blank">
+                    Twitter
+                  </a>
+                }
               />
               <List.Item
                 icon="github"
                 style={{ display: 'flex' }}
                 content={
-                  <a href="https://github.com/Altair-Devs">
+                  <a href="https://github.com/Altair-Devs" target="blank">
                     GitHub
                   </a>
                 }
@@ -68,9 +80,10 @@ const Footer = () => (
       </Grid>
       <div className="colophon">
         <p className="colophon-entry">
-				If you are a fan of classic art too, thanks for your interest! <br />
-				Appreciate that you got all the way down here and read this.<br />
-				Take care!
+          If you are a fan of classic art too, thanks for your interest! <br />
+          Appreciate that you got all the way down here and read this.
+          <br />
+          Take care!
         </p>
       </div>
     </Container>

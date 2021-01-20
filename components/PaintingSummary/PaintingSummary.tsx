@@ -9,18 +9,17 @@ type PaintingSummaryProps = {
 
 const PaintingSummary = ({ painting }: PaintingSummaryProps) => (
   <>
+    <img src={painting.image} alt={painting.name} /> <br />
     <Item.Group as="section">
       <Item style={{ alignItems: 'center' }}>
-        <Item.Image size="medium">
-          <img src={painting.image} alt={painting.name} />
-        </Item.Image>
+        {/* <Item.Image size="medium"> */}
+        {/* </Item.Image> */}
 
         <Item.Content>
           <Item.Header as="h1">{painting.name}</Item.Header>
 
           <Item.Description>
-            <p>{painting.year}</p>
-            <Label>{`Year: ${painting.year}`}</Label>
+            <Label>{`Año ${painting.year}`}</Label>
           </Item.Description>
 
           <Item.Extra>{/* <AddToCart product={product} /> */}</Item.Extra>
@@ -29,6 +28,13 @@ const PaintingSummary = ({ painting }: PaintingSummaryProps) => (
     </Item.Group>
 
     <PaintingAttributes {...painting.attributes} />
+
+    <style jsx>{`
+      img {
+        justify-content: center;
+        max-width: 700px;
+      }
+    `}</style>
   </>
 )
 
