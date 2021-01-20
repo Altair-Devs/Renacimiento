@@ -1,33 +1,28 @@
-import React, { useEffect, useState} from 'react'
-import Navbar from '../components/Navbar/Navbar'
+import React, { useEffect, useState} from 'react';
+
+import PaintingList from '@components/PaintingList/PaintingList';
 
 const HomePage = () => {
-  const [productList, setProductList] = useState<TProduct[]>([]);
+	const [paintingList, setPaintingList] = useState<TPainting[]>([]);
 
-  useEffect(() => {
-    window
-      .fetch('/api/painting')
-      .then((response) => response.json())
-      .then(({ data, length}) => {
-        setProductList(data);
-      })
-  }, [])
+	useEffect(() => {
+		window
+			.fetch('/api/painting')
+			.then((response) => response.json())
+			.then(({ data, length}) => {
+				setPaintingList(data);
+			});
+	}, []);
 
-  console.log(productList)
+	console.log(paintingList);
 
-  return (
-    <div>
-      <Navbar />
-      <h1>Renacimiento</h1>
+	return (
+		<div>
+			<h1>Renacimiento</h1>
 
-      {productList.map((product) => (
-        <div key={product.id}>
-          <h3>{ product.name }</h3>
-          <img src={product.image} alt={product.name}/>
-        </div>
-      ))}
-    </div>
-  )
-}
+			<PaintingList paintings={paintingList} />
+		</div>
+	);
+};
 
 export default HomePage;
