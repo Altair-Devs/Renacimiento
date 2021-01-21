@@ -48,10 +48,8 @@ And take a look at Renaissance art!
 </p>
 
 <p align="center">
-  <h1 align="center"> Made by </h1>
-  <a align="center" href="https://github.com/Altair-Devs">
-    Irungaray & Natali Calzia for Altaïr Devs
-  </a>
+  <h2> Made by </h2>
+  <h3>Irungaray & Natali Calzia for <a href="https://github.com/Altair-Devs">Altaïr Devs</a></h3>
 </p>
 
 <!-- AUTO-GENERATED-CONTENT:END -->
